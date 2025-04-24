@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import NamePrompt from './components/UserModal'
 
 function App() {
   const [message, setMessage] = useState<string>("")
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <>
+      <NamePrompt vis={vis} name={name} setName={setName} setVis={setVis} />
       <div className="flex flex-row text-gray-100">
         <div className='w-full bg-slate-700 flex flex-col pb-5' >
           <div className='w-full min-h-screen flex flex-col justify-end gap-4 pb-20' id="chatbox">
